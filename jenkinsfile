@@ -13,13 +13,7 @@ steps{
 sh 'mvn package'
     }
                    }
-stage('Sonar'){
-steps{
-withSonarQubeEnv(credentialsId: '83d1635d-0578-4789-b3db-2b782f4dd9f1'){
-sh 'mvn sonar:sonar'
-    }
-}
-}
+
                    
                    
 stage('Deploy'){
